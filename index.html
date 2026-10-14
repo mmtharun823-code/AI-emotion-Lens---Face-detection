@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Face Expression Detector</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- face-api.js library from CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Emotion <span>Lens</span></h1>
+            <p>Real-time facial expression analysis</p>
+        </header>
+
+        <main class="video-container">
+            <div id="loader" class="loader-container">
+                <div class="spinner"></div>
+                <p>Loading AI Models...</p>
+            </div>
+            <!-- Video and Canvas elements -->
+            <div class="media-wrapper">
+                <video id="video" width="720" height="560" autoplay muted playsinline></video>
+                <!-- Canvas will be dynamically positioned over the video via CSS/JS -->
+            </div>
+        </main>
+
+        <section class="info-panel">
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="system-status">System Initializing</span>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Please ensure your face is well-lit and clearly visible to the camera.</p>
+        </footer>
+    </div>
+</body>
+</html>
